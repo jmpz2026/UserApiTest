@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Collections;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
@@ -28,7 +29,7 @@ public class UserService {
         userResponseDTO.setId(id);
         userResponseDTO.setName(userEntity.getName());
         userResponseDTO.setSex(userEntity.getSex());
-        userResponseDTO.setHobbies(Collections.singletonList(userEntity.getHobbies()));
+        userResponseDTO.setHobbies(userEntity.getHobbies());
 
         return userResponseDTO;
     }
@@ -37,14 +38,14 @@ public class UserService {
         UserEntity userEntity = new UserEntity();
         userEntity.setName(userRequestDTO.getName());
         userEntity.setSex(userRequestDTO.getSex());
-        userEntity.setHobbies(String.valueOf(userRequestDTO.getHobbies()));
+        userEntity.setHobbies(userRequestDTO.getHobbies());
         userRepository.save(userEntity);
 
         UserResponseDTO userResponseDTO = new UserResponseDTO();
         userResponseDTO.setId(userEntity.getId());
         userResponseDTO.setName(userEntity.getName());
         userResponseDTO.setSex(userEntity.getSex());
-        userResponseDTO.setHobbies(Collections.singletonList(userEntity.getHobbies()));
+        userResponseDTO.setHobbies(userEntity.getHobbies());
 
         return userResponseDTO;
     }

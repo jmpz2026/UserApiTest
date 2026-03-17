@@ -11,8 +11,8 @@
 	<groupId>com.chamo</groupId>
 	<artifactId>UserApiTest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>DragonBallRace</name>
-	<description>DragonBallRace</description>
+	<name>UserApiTest</name>
+	<description>UserApiTest</description>
 	<url/>
 	<licenses>
 		<license/>

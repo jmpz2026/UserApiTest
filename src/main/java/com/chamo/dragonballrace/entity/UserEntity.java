@@ -1,9 +1,12 @@
 package com.chamo.dragonballrace.entity;
 
+import com.chamo.dragonballrace.enums.UserHobbyEnum;
 import com.chamo.dragonballrace.enums.UserSexEnum;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -21,6 +24,6 @@ public class UserEntity {
     @Column(name = "sex", nullable = false)
     private UserSexEnum sex;
 
-    @Column(name = "friends", nullable = false)
-    private String hobbies;
+    @Column(name = "hobbies", nullable = false)
+    private List<UserHobbyEnum> hobbies;
 }

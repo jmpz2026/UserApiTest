@@ -1,5 +1,6 @@
 package com.chamo.dragonballrace.dto;
 
+import com.chamo.dragonballrace.enums.UserHobbyEnum;
 import com.chamo.dragonballrace.enums.UserSexEnum;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,5 +14,5 @@ public class UserResponseDTO {
     private Long id;
     private String name;
     private UserSexEnum sex;
-    private List<String> hobbies;
+    private List<UserHobbyEnum> hobbies;
 }
