@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DragonBallRaceApplication {
+public class UserApiTestApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DragonBallRaceApplication.class, args);
+		SpringApplication.run(UserApiTestApplication.class, args);
 	}
 
 }
